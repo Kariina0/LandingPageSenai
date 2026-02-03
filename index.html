@@ -3,63 +3,459 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EduTech Future - Transformando a Educação</title>
+    <meta name="description" content="EduTech Future - Educação inovadora com cursos, mentorias e certificações para o mercado de trabalho do futuro. Transforme sua carreira!">
+    <meta name="keywords" content="educação, tecnologia, cursos online, mentorias, certificações, carreira, futuro">
+    <title>EduTech Future | Educação Inovadora para o Futuro</title>
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="EduTech Future | Educação Inovadora">
+    <meta property="og:description" content="Aprenda as habilidades do futuro com nossa metodologia prática.">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://img.icons8.com/color/96/000000/education.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <header class="hero">
-        <div class="container">
-            <h1>O Futuro da Educação Começa Aqui</h1>
-            <p>Plataforma completa de ensino para desenvolver as habilidades do amanhã.</p>
-            <button onclick="scrollToContact()">Começar Agora</button>
-        </div>
-    </header>
-
-    <section id="servicos" class="container">
-        <h2>Nossos Serviços</h2>
-        <div class="grid-servicos">
-            <div class="card">
-                <h3>Cursos Online</h3>
-                <p>Aulas gravadas com especialistas para você assistir quando quiser.</p>
+    <!-- Skip to Content for Accessibility -->
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="#home" aria-label="EduTech Future - Página inicial">
+                    <span class="logo-text">EduTech</span>
+                    <span class="logo-dot">.</span>
+                    <span class="logo-sub">Future</span>
+                </a>
             </div>
-            <div class="card">
-                <h3>Mentorias Ao Vivo</h3>
-                <p>Acompanhamento personalizado para acelerar sua carreira.</p>
-            </div>
-            <div class="card">
-                <h3>Workshops Práticos</h3>
-                <p>Aprenda colocando a mão na massa com projetos reais.</p>
-            </div>
+            
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            
+            <!-- Menu -->
+            <ul class="menu" role="menubar">
+                <li role="none"><a href="#servicos" role="menuitem">Serviços</a></li>
+                <li role="none"><a href="#sobre" role="menuitem">Sobre</a></li>
+                <li role="none"><a href="#depoimentos" role="menuitem">Depoimentos</a></li>
+                <li role="none"><a href="#contato" role="menuitem" class="btn-nav">Contato</a></li>
+            </ul>
         </div>
-    </section>
+    </nav>
 
-    <section id="sobre" class="bg-light">
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <header class="hero" id="home">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        Aprenda as Habilidades 
+                        <span class="highlight">do Futuro</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Transforme sua carreira com nossa metodologia prática e focada no mercado de trabalho. 
+                        <strong>Mais de 5.000 alunos impactados.</strong>
+                    </p>
+                    <div class="hero-actions">
+                        <button onclick="scrollToContact()" class="btn-primary" aria-label="Começar agora com a EduTech">
+                            Começar Agora
+                            <span class="btn-icon">→</span>
+                        </button>
+                        <button onclick="scrollToServices()" class="btn-secondary" aria-label="Saiba mais sobre nossos serviços">
+                            Saiba Mais
+                        </button>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">5.000+</span>
+                            <span class="stat-label">Alunos</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">98%</span>
+                            <span class="stat-label">Satisfação</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">24/7</span>
+                            <span class="stat-label">Suporte</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-placeholder">
+                        <div class="floating-elements">
+                            <div class="floating-card card-1">💻</div>
+                            <div class="floating-card card-2">🚀</div>
+                            <div class="floating-card card-3">🎓</div>
+                        </div>
+                        <div class="hero-img-content">
+                            <h3>Educação que transforma</h3>
+                            <p>Metodologia prática e resultados reais</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Services Section -->
+        <section id="servicos" class="section-padding" aria-labelledby="services-heading">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge">Nossos Serviços</span>
+                    <h2 id="services-heading">O que oferecemos para seu desenvolvimento</h2>
+                    <p class="section-subtitle">Soluções completas para impulsionar sua carreira na era digital</p>
+                </div>
+                
+                <div class="services-grid">
+                    <article class="service-card" aria-labelledby="card1-title">
+                        <div class="card-icon">
+                            <div class="icon-wrapper">
+                                💻
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3 id="card1-title">Cursos Online</h3>
+                            <p>Acesse conteúdos exclusivos e atualizados onde e quando quiser. Aprenda com projetos reais.</p>
+                            <ul class="card-features">
+                                <li>Acesso vitalício</li>
+                                <li>Atualizações constantes</li>
+                                <li>Comunidade ativa</li>
+                            </ul>
+                            <button class="card-button" aria-label="Saiba mais sobre nossos cursos">Saiba mais →</button>
+                        </div>
+                    </article>
+                    
+                    <article class="service-card highlight-card" aria-labelledby="card2-title">
+                        <div class="card-icon">
+                            <div class="icon-wrapper">
+                                🚀
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3 id="card2-title">Mentorias Personalizadas</h3>
+                            <p>Acelere seu crescimento com acompanhamento 1:1 de experts do mercado.</p>
+                            <ul class="card-features">
+                                <li>Sessões individuais</li>
+                                <li>Feedback personalizado</li>
+                                <li>Plano de carreira</li>
+                            </ul>
+                            <button class="card-button" aria-label="Saiba mais sobre mentorias">Saiba mais →</button>
+                        </div>
+                    </article>
+                    
+                    <article class="service-card" aria-labelledby="card3-title">
+                        <div class="card-icon">
+                            <div class="icon-wrapper">
+                                🎓
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3 id="card3-title">Certificações Reconhecidas</h3>
+                            <p>Obtenha certificados reconhecidos pelo mercado para impulsionar seu currículo.</p>
+                            <ul class="card-features">
+                                <li>Certificação digital</li>
+                                <li>Verificação online</li>
+                                <li>Reconhecimento internacional</li>
+                            </ul>
+                            <button class="card-button" aria-label="Saiba mais sobre certificações">Saiba mais →</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="sobre" class="section-padding bg-light" aria-labelledby="about-heading">
+            <div class="container about-container">
+                <div class="about-content">
+                    <span class="section-badge">Sobre Nós</span>
+                    <h2 id="about-heading">Nossa Missão é Transformar Educação</h2>
+                    <p>A EduTech nasceu com o propósito de democratizar o ensino de tecnologia de alta qualidade. Acreditamos que a educação é a chave para desbloquear o potencial humano.</p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <span class="feature-icon">🎯</span>
+                            <div>
+                                <h4>Foco no Mercado</h4>
+                                <p>Conteúdo alinhado com as demandas atuais do mercado de trabalho</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">🤝</span>
+                            <div>
+                                <h4>Comunidade Ativa</h4>
+                                <p>Network com profissionais e alunos de todo o Brasil</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-stats">
+                        <div class="about-stat">
+                            <span class="about-stat-number">2024</span>
+                            <span class="about-stat-label">Ano de Fundação</span>
+                        </div>
+                        <div class="about-stat">
+                            <span class="about-stat-number">5.000+</span>
+                            <span class="about-stat-label">Alunos Impactados</span>
+                        </div>
+                        <div class="about-stat">
+                            <span class="about-stat-number">50+</span>
+                            <span class="about-stat-label">Instrutores Especialistas</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-frame">
+                        <div class="image-content">
+                            <div class="team-avatar"></div>
+                            <div class="team-info">
+                                <h4>Equipe EduTech</h4>
+                                <p>Especialistas em educação e tecnologia</p>
+                            </div>
+                        </div>
+                        <div class="image-badge">
+                            <span>✅</span>
+                            <span>Educação de Qualidade</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section id="depoimentos" class="section-padding" aria-labelledby="testimonials-heading">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge">Depoimentos</span>
+                    <h2 id="testimonials-heading">O que nossos alunos dizem</h2>
+                    <p class="section-subtitle">Histórias reais de transformação</p>
+                </div>
+                
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">★★★★★</div>
+                        <p class="testimonial-text">"A metodologia prática da EduTech me ajudou a conseguir minha primeira vaga como desenvolvedor em 3 meses!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">M</div>
+                            <div class="author-info">
+                                <h4>Maria Silva</h4>
+                                <p>Desenvolvedora Front-end</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">★★★★★</div>
+                        <p class="testimonial-text">"As mentorias foram fundamentais para minha transição de carreira. Os instrutores são incríveis!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">C</div>
+                            <div class="author-info">
+                                <h4>Carlos Santos</h4>
+                                <p>Analista de Dados</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">★★★★★</div>
+                        <p class="testimonial-text">"Os certificados me deram a credibilidade que precisava para negociar um aumento salarial."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">A</div>
+                            <div class="author-info">
+                                <h4>Ana Oliveira</h4>
+                                <p>Product Manager</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section section-padding">
+            <div class="container cta-container">
+                <div class="cta-content">
+                    <h2>Comece sua transformação hoje</h2>
+                    <p>Junte-se a milhares de alunos que já transformaram suas carreiras com a EduTech.</p>
+                    <div class="cta-features">
+                        <div class="cta-feature">
+                            <span class="cta-feature-icon">✅</span>
+                            <span>7 dias de garantia</span>
+                        </div>
+                        <div class="cta-feature">
+                            <span class="cta-feature-icon">✅</span>
+                            <span>Suporte 24/7</span>
+                        </div>
+                        <div class="cta-feature">
+                            <span class="cta-feature-icon">✅</span>
+                            <span>Certificado reconhecido</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cta-action">
+                    <button onclick="scrollToContact()" class="btn-primary btn-large">
+                        Começar Agora
+                        <span class="btn-icon">🚀</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contato" class="section-padding bg-light" aria-labelledby="contact-heading">
+            <div class="container contact-container">
+                <div class="contact-info">
+                    <h2 id="contact-heading">Vamos Conversar?</h2>
+                    <p>Preencha o formulário abaixo para garantir sua vaga ou tirar suas dúvidas.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <span class="contact-icon">📧</span>
+                            <div>
+                                <h4>E-mail</h4>
+                                <p>contato@edutechfuture.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📱</span>
+                            <div>
+                                <h4>WhatsApp</h4>
+                                <p>(11) 99999-9999</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📍</span>
+                            <div>
+                                <h4>Localização</h4>
+                                <p>São Paulo, Brasil</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="form-contato" aria-labelledby="contact-heading">
+                        <div class="form-group">
+                            <label for="nome">Nome Completo *</label>
+                            <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">E-mail *</label>
+                            <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="interesse">Interesse Principal</label>
+                            <select id="interesse" name="interesse">
+                                <option value="">Selecione uma opção</option>
+                                <option value="cursos">Cursos Online</option>
+                                <option value="mentorias">Mentorias</option>
+                                <option value="certificacoes">Certificações</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="mensagem">Como podemos ajudar? *</label>
+                            <textarea id="mensagem" name="mensagem" placeholder="Conte-nos sobre seus objetivos..." rows="4" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary full-width">
+                            Enviar Mensagem
+                            <span class="btn-icon">📨</span>
+                        </button>
+                        
+                        <p class="form-note">* Campos obrigatórios. Entraremos em contato em até 24h.</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
         <div class="container">
-            <h2>Sobre a EduTech</h2>
-            <p>Nascemos com a missão de democratizar o acesso ao conhecimento tecnológico de alta qualidade. Nossa história começou em uma pequena sala de aula e hoje impactamos milhares de alunos.</p>
-        </div>
-    </section>
-
-    <section id="contato" class="container">
-        <h2>Fale Conosco</h2>
-        <form id="form-contato">
-            <input type="text" placeholder="Seu Nome" required>
-            <input type="email" placeholder="Seu E-mail" required>
-            <textarea placeholder="Sua Mensagem" required></textarea>
-            <button type="submit">Enviar Mensagem</button>
-        </form>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 EduTech Future. Todos os direitos reservados.</p>
-            <div class="social-links">
-                <a href="#">Instagram</a> | <a href="#">LinkedIn</a>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <span class="logo-text">EduTech</span>
+                        <span class="logo-dot">.</span>
+                        <span class="logo-sub">Future</span>
+                    </div>
+                    <p class="footer-description">
+                        Educação inovadora para o futuro. Transformando carreiras através da tecnologia.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://instagram.com/edutech" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <span class="social-icon">📸</span>
+                        </a>
+                        <a href="https://linkedin.com/company/edutech" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <span class="social-icon">💼</span>
+                        </a>
+                        <a href="https://github.com/edutech" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                            <span class="social-icon">💻</span>
+                        </a>
+                        <a href="https://youtube.com/edutech" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                            <span class="social-icon">🎬</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Serviços</h4>
+                    <ul class="footer-links">
+                        <li><a href="#servicos">Cursos Online</a></li>
+                        <li><a href="#servicos">Mentorias</a></li>
+                        <li><a href="#servicos">Certificações</a></li>
+                        <li><a href="#servicos">Para Empresas</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Empresa</h4>
+                    <ul class="footer-links">
+                        <li><a href="#sobre">Sobre Nós</a></li>
+                        <li><a href="#depoimentos">Depoimentos</a></li>
+                        <li><a href="#contato">Carreiras</a></li>
+                        <li><a href="#contato">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Termos de Uso</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                        <li><a href="#">Cookies</a></li>
+                        <li><a href="#contato">Suporte</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 EduTech Future. Todos os direitos reservados.</p>
+                <p>Desenvolvido com ❤️ para transformar educação.</p>
             </div>
         </div>
     </footer>
 
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Voltar ao topo">
+        ↑
+    </button>
+
+    <!-- JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
