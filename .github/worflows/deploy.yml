@@ -1,0 +1,47 @@
+name: Deploy to Github Pages
+
+
+# É o gatilho(trigger)
+on:
+# Enviar o codigo
+  push:
+    # Filtra o gatilho. A automação só trabalha com pastas principais
+    braches: ["main", "master"]
+  # Isso cria um botão no site do Github
+  worflow_dispatch:
+
+# permite que a automação escreva, publique o site
+permissions:
+  contents: read
+  pages: write
+  # necessario para autenticação segura durante o deploy
+  id-token: write
+
+# Integridade das paginas
+concurrency:
+  group: "pages"
+  cancel-in-progess: false
+
+# Significa trabalhos, lista de tarefas
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steaps.deployment.outputs.page_url }}
+    # Rodar no sistema operacional Ubunto
+    runs-on: ubunto-latest
+    steaps:
+      - name: Checkout
+        users: actions/checkout@v4s
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4s
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: '.'
+
+      - name: Deploy to Github Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
