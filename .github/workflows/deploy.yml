@@ -6,9 +6,9 @@ on:
 # Enviar o codigo
   push:
     # Filtra o gatilho. A automação só trabalha com pastas principais
-    braches: ["main", "master"]
+    branches: ["main", "master"]
   # Isso cria um botão no site do Github
-  worflow_dispatch:
+  workflow_dispatch:
 
 # permite que a automação escreva, publique o site
 permissions:
@@ -20,7 +20,7 @@ permissions:
 # Integridade das paginas
 concurrency:
   group: "pages"
-  cancel-in-progess: false
+  cancel-in-progress: false
 
 # Significa trabalhos, lista de tarefas
 jobs:
@@ -30,9 +30,9 @@ jobs:
       url: ${{ steaps.deployment.outputs.page_url }}
     # Rodar no sistema operacional Ubunto
     runs-on: ubunto-latest
-    steaps:
+    steps:
       - name: Checkout
-        users: actions/checkout@v4s
+        uses: actions/checkout@v4s
 
       - name: Setup Pages
         uses: actions/configure-pages@v4s
