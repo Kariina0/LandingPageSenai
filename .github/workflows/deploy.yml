@@ -27,15 +27,15 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ steaps.deployment.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url }}
     # Rodar no sistema operacional Ubunto
-    runs-on: ubunto-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4s
+        uses: actions/checkout@v4
 
       - name: Setup Pages
-        uses: actions/configure-pages@v4s
+        uses: actions/configure-pages@v4
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
